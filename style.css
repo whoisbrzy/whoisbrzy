@@ -1,12 +1,244 @@
-// Hello
-p {
-  color: #999;
-  font-size: 18px;
-  line-height: 1.7;
-  margin-top; 18px;
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 0 7%;
+}
+
+/* NAVIGATION */
+.navbar {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #999;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* HERO */
+.hero {
+    min-height: 570px;
+    padding: 110px 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #bdbdbd;
+    font-size: 12px;
+    border: 1px solid #292929;
+    border-radius: 100px;
+    padding: 9px 13px;
+    margin-bottom: 30px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #80d49b;
+    box-shadow: 0 0 10px #80d49b66;
+}
+
+h1 {
+    font-size: clamp(44px, 7vw, 84px);
+    font-weight: 600;
+    letter-spacing: -4px;
+    line-height: 1.05;
+}
+
+.muted {
+    color: #777;
+}
+
+.intro {
+    max-width: 470px;
+    margin-top: 24px;
+    color: #999;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* BUTTONS */
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.button-primary,
+.button-secondary {
+    min-height: 46px;
+    padding: 0 19px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 14px;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.button-primary {
+    background: #f5f5f5;
+    color: #080808;
+    border: 1px solid #f5f5f5;
+}
+
+.button-primary:hover {
+    transform: translateY(-3px);
+    background: #dcdcdc;
+}
+
+.button-primary span {
+    transition: transform 0.25s ease;
+}
+
+.button-primary:hover span {
+    transform: translate(3px, -3px);
+}
+
+.button-secondary {
+    color: #ddd;
+    border: 1px solid #303030;
+    background: transparent;
+}
+
+.button-secondary:hover {
+    border-color: #777;
+    background: #151515;
+    transform: translateY(-3px);
+}
+
+/* HERO FOOTER */
+.hero-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: auto;
+    padding-top: 55px;
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* PROJECTS AND CONTACT */
+.projects,
+.contact {
+    padding: 90px 0;
+    border-top: 1px solid #222;
+}
+
+.section-label {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+h2 {
+    margin-top: 22px;
+    font-size: clamp(30px, 5vw, 48px);
+    letter-spacing: -2px;
+}
+
+.projects p,
+.contact p {
+    margin: 16px 0 25px;
+    color: #999;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid #222;
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    body {
+        padding: 0 6%;
+    }
+
+    .navbar {
+        height: 75px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 540px;
+        padding-top: 95px;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-footer {
+        font-size: 8px;
+        letter-spacing: 0.7px;
+    }
 }
